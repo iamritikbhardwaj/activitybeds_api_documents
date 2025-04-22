@@ -3,7 +3,7 @@
 Welcome to the **ActivityBeds API Docs**.  
 This API allows clients to retrieve country and city data, including metadata like currencies, timezone offsets, and configuration flags.
 
-In addition to location data, the API also supports access to:
+the API supports access to:
 
 - 🏞️ **Activities**
 - 🚗 **Transfers**
