@@ -1,4 +1,4 @@
----
+
 ```markdown
 # 🌍 ActivityBeds API Documentation
 
