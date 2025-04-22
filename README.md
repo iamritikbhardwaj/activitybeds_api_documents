@@ -179,13 +179,148 @@ GET /gapi/getCities?code=SG
   "OUTPUT": "Detailed error message"
 }
 ```
+---
+
+## 🧾 GET `/gapi/setProducts`
+
+### Description
+
+Fetches products (activities, tours, and transfers) for a specific city based on its name and country ID.
+
+---
+
+### 🔍 Query Parameters
+
+| Parameter   | Type   | Required | Description                  |
+|-------------|--------|----------|------------------------------|
+| `city`      | string | ✅ Yes    | Name of the city (e.g., "Bali") |
+| `countryId` | number | ✅ Yes    | Numeric ID of the country    |
+
+---
+
+### 📥 Example Request
+
+GET http://localhost:3001/gapi/setProducts?city=Bali&countryId=2
+
+### ✅ Example Success Response
+
+```json
+{
+  "STATUS": "SUCCESS",
+  "MESSAGE": "Products fetched successfully",
+  "OUTPUT": [
+    {
+      "city": "Bali",
+      "tours": [],
+      "activities": [
+        {
+          "country": "Indonesia",
+          "originalPrice": 6000,
+          "keywords": null,
+          "fromPrice": 130000,
+          "city": "Bali",
+          "currency": "IDR",
+          "id": 33147,
+          "isGTRecommend": false,
+          "image": "a6247942-639b-4276-aa0a-c52486a04afa",
+          "isOpenDated": true,
+          "isOwnContracted": false,
+          "merchant": {
+            "id": 2608,
+            "name": "Secret Garden Village"
+          },
+          "isFavorited": false,
+          "isBestSeller": false,
+          "fromReseller": null,
+          "isCancellable": true,
+          "name": "Activities at Secret Garden Village",
+          "isInstantConfirmation": true,
+          "category": "Attraction"
+        },
+        {
+          "country": "Indonesia",
+          "originalPrice": 1200000,
+          "keywords": null,
+          "fromPrice": 1200000,
+          "city": "Bali",
+          "currency": "IDR",
+          "id": 34068,
+          "isGTRecommend": false,
+          "image": "f76fd59f-8855-4872-a0d4-056413a5b477",
+          "isOpenDated": true,
+          "isOwnContracted": false,
+          "merchant": {
+            "id": 2935,
+            "name": "Gosek Adventure"
+          },
+          "isFavorited": false,
+          "isBestSeller": false,
+          "fromReseller": null,
+          "isCancellable": true,
+          "name": "ATV by Gosek Adventure",
+          "isInstantConfirmation": true,
+          "category": "Attraction"
+        }
+      ],
+      "transfers": [
+        {
+          "country": "Indonesia",
+          "originalPrice": 650000,
+          "keywords": "Transfer,Cruise,Family Friendly",
+          "fromPrice": 650000,
+          "city": "Bali",
+          "currency": "IDR",
+          "id": 33131,
+          "isGTRecommend": false,
+          "image": "d1edfa67-473c-4d90-abc5-ffec1768a0c5",
+          "isOpenDated": true,
+          "isOwnContracted": false,
+          "merchant": {
+            "id": 2607,
+            "name": "Dcamel Fast Cruise"
+          },
+          "isFavorited": false,
+          "isBestSeller": false,
+          "fromReseller": null,
+          "isCancellable": true,
+          "name": "2D1N Trip Nusa Lembongan by Dcamel",
+          "isInstantConfirmation": true,
+          "category": "Transportation"
+        }
+      ],
+      "_id": "680775a3714274ec6cdb6c03",
+      "__v": 0
+    }
+  ]
+}
+```
+
+---
+
+### ❌ Error Response
+
+```json
+{
+  "STATUS": "FAIL",
+  "MESSAGE": "City or country not found",
+  "OUTPUT": null
+}
+```
+
+---
+
+### 📝 Notes
+
+- This endpoint retrieves all available **activities**, **tours**, and **transfers** grouped under a city.
+- Fields such as `isCancellable`, `isGTRecommend`, `merchant`, and `image` help power UI features on frontend platforms.
+- Currency and pricing fields are returned for easy display and conversion.
 
 ---
 
 ## 📝 Notes
 
 - All timestamps are returned in ISO 8601 format.
-- Country codes are case-insensitive (`sg`, `SG`, `sG` all work).
+- Country codes are case-sensitive (`sg`, `sG` does not work).
 - Response is always wrapped in `STATUS`, `MESSAGE`, and `OUTPUT`.
 
 ---
