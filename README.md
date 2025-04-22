@@ -1,14 +1,21 @@
-
-```markdown
 # 🌍 ActivityBeds API Documentation
 
-Welcome to the ActivityBeds API Docs. This API allows clients to retrieve country and city data, including metadata like currencies, timezone offsets, and configuration flags.
+Welcome to the **ActivityBeds API Docs**.  
+This API allows clients to retrieve country and city data, including metadata like currencies, timezone offsets, and configuration flags.
+
+In addition to location data, the API also supports access to:
+
+- 🏞️ **Activities**
+- 🚗 **Transfers**
+- 🏨 **Hotels**
+
+These services are designed to help build powerful travel platforms, booking engines, or integrated tourism systems.
 
 ---
 
 ## 📍 Base URL
 
-```
+
 http://<your-domain-or-localhost>/gapi
 ```
 
