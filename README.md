@@ -16,7 +16,7 @@ These services are designed to help build powerful travel platforms, booking eng
 ## 📍 Base URL
 
 
-http://<activitybeds>/gapi
+http://activitybeds/gapi
 
 ---
 
