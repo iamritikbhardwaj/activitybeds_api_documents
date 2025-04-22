@@ -17,7 +17,6 @@ These services are designed to help build powerful travel platforms, booking eng
 
 
 http://<your-domain-or-localhost>/gapi
-```
 
 > Replace `<your-domain-or-localhost>` with your actual server address or port.
 
@@ -214,4 +213,3 @@ curl "http://localhost:3000/gapi/getCities?code=SG"
 
 > For support, raise an issue in this repo or reach out to the backend team.
 ```
----
