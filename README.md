@@ -339,7 +339,6 @@ These endpoints return a **single product** — either an activity, transfer, or
 GET http://localhost:3001/gapi/getOneActivity?id=33147
 GET http://localhost:3001/gapi/getOneTransfer?id=33131
 GET http://localhost:3001/gapi/getOneTour?id=12345
-```
 
 ---
 
