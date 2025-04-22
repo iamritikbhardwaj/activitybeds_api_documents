@@ -16,9 +16,7 @@ These services are designed to help build powerful travel platforms, booking eng
 ## 📍 Base URL
 
 
-http://<your-domain-or-localhost>/gapi
-
-> Replace `<your-domain-or-localhost>` with your actual server address or port.
+http://<activitybeds>/gapi
 
 ---
 
