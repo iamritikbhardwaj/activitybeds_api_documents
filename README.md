@@ -336,9 +336,9 @@ These endpoints return a **single product** — either an activity, transfer, or
 ### 📥 Example Requests
 
 
-GET http://localhost:3001/gapi/getOneActivity?id=33147
-GET http://localhost:3001/gapi/getOneTransfer?id=33131
-GET http://localhost:3001/gapi/getOneTour?id=12345
+- GET http://localhost:3001/gapi/getOneActivity?id=33147
+- GET http://localhost:3001/gapi/getOneTransfer?id=33131
+- GET http://localhost:3001/gapi/getOneTour?id=12345
 
 ---
 
@@ -413,10 +413,6 @@ GET http://localhost:3001/gapi/getOneTour?id=12345
 - Ensure your MongoDB contains the base countries data before using `/getCities`.
 - If you're using Mongoose, prefer `.lean()` to avoid circular JSON issues.
 - Responses are designed to be frontend-consumable out of the box.
-
----
-
----
 
 ---
 
