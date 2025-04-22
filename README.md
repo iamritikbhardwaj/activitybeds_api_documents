@@ -317,6 +317,94 @@ GET http://localhost:3001/gapi/setProducts?city=Bali&countryId=2
 
 ---
 
+
+- `/getOneActivity`
+- `/getOneTransfer`
+- `/getOneTour`
+
+These return a **single product item** (activity, transfer, or tour), using the same consistent response structure.
+
+---
+
+### ✅ Here’s the Markdown block you can **paste directly** into your `README.md`:
+
+---
+
+## 🔍 GET `/gapi/getOneActivity`, `/getOneTransfer`, `/getOneTour`
+
+### Description
+
+These endpoints return a **single product** (activity, transfer, or tour) from the database. Each is typically fetched by internal query conditions (e.g., ID, name, etc. depending on how you've implemented it).
+
+---
+
+### 📥 Example Requests
+
+GET http://localhost:3001/gapi/getOneActivity
+GET http://localhost:3001/gapi/getOneTransfer
+GET http://localhost:3001/gapi/getOneTour
+
+> These are usually used to preview or fetch a detailed record for display or edit.
+
+---
+
+### ✅ Example Success Response
+
+```json
+{
+  "STATUS": "SUCCESS",
+  "MESSAGE": "Products fetched successfully",
+  "OUTPUT": [
+    {
+      "country": "Indonesia",
+      "originalPrice": 6000,
+      "keywords": null,
+      "fromPrice": 130000,
+      "city": "Bali",
+      "currency": "IDR",
+      "id": 33147,
+      "isGTRecommend": false,
+      "image": "a6247942-639b-4276-aa0a-c52486a04afa",
+      "isOpenDated": true,
+      "isOwnContracted": false,
+      "merchant": {
+        "id": 2608,
+        "name": "Secret Garden Village"
+      },
+      "isFavorited": false,
+      "isBestSeller": false,
+      "fromReseller": null,
+      "isCancellable": true,
+      "name": "Activities at Secret Garden Village",
+      "isInstantConfirmation": true,
+      "category": "Attraction"
+    }
+  ]
+}
+```
+
+---
+
+### ❌ Error Response
+
+```json
+{
+  "STATUS": "FAIL",
+  "MESSAGE": "Product not found",
+  "OUTPUT": null
+}
+```
+
+---
+
+### 📝 Notes
+
+- The structure of the returned object is consistent with `/getCities` and `/setProducts`.
+- The exact behavior (e.g., filtering by ID or keyword) depends on your backend implementation.
+- You can expand this to support query parameters like `?id=33147` if needed for dynamic fetching.
+
+---
+
 ## 📝 Notes
 
 - All timestamps are returned in ISO 8601 format.
