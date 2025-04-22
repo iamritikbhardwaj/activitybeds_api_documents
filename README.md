@@ -317,34 +317,29 @@ GET http://localhost:3001/gapi/setProducts?city=Bali&countryId=2
 
 ---
 
-
-- `/getOneActivity`
-- `/getOneTransfer`
-- `/getOneTour`
-
-These return a **single product item** (activity, transfer, or tour), using the same consistent response structure.
-
----
-
-### ✅ Here’s the Markdown block you can **paste directly** into your `README.md`:
-
----
-
 ## 🔍 GET `/gapi/getOneActivity`, `/getOneTransfer`, `/getOneTour`
 
 ### Description
 
-These endpoints return a **single product** (activity, transfer, or tour) from the database. Each is typically fetched by internal query conditions (e.g., ID, name, etc. depending on how you've implemented it).
+These endpoints return a **single product** — either an activity, transfer, or tour — based on a unique ID passed as a query parameter.
+
+---
+
+### 🔍 Query Parameters
+
+| Parameter | Type   | Required | Description                |
+|-----------|--------|----------|----------------------------|
+| `id`      | number | ✅ Yes    | The unique ID of the item  |
 
 ---
 
 ### 📥 Example Requests
 
-GET http://localhost:3001/gapi/getOneActivity
-GET http://localhost:3001/gapi/getOneTransfer
-GET http://localhost:3001/gapi/getOneTour
 
-> These are usually used to preview or fetch a detailed record for display or edit.
+GET http://localhost:3001/gapi/getOneActivity?id=33147
+GET http://localhost:3001/gapi/getOneTransfer?id=33131
+GET http://localhost:3001/gapi/getOneTour?id=12345
+```
 
 ---
 
@@ -399,9 +394,9 @@ GET http://localhost:3001/gapi/getOneTour
 
 ### 📝 Notes
 
-- The structure of the returned object is consistent with `/getCities` and `/setProducts`.
-- The exact behavior (e.g., filtering by ID or keyword) depends on your backend implementation.
-- You can expand this to support query parameters like `?id=33147` if needed for dynamic fetching.
+- These endpoints are useful for fetching details for a single card or detail page.
+- Make sure the `id` is valid and exists in the database.
+- Response will always return an array with a single object.
 
 ---
 
