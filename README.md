@@ -2,7 +2,7 @@
 ```markdown
 # 🌍 ActivityBeds API Documentation
 
-Welcome to the **ActivityBeds API Docs**. This API allows clients to retrieve country and city data, including metadata like currencies, timezone offsets, and configuration flags.
+Welcome to the ActivityBeds API Docs. This API allows clients to retrieve country and city data, including metadata like currencies, timezone offsets, and configuration flags.
 
 ---
 
