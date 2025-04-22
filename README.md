@@ -1,3 +1,4 @@
+---
 ```markdown
 # 🌍 ActivityBeds API Documentation
 
@@ -206,3 +207,4 @@ curl "http://localhost:3000/gapi/getCities?code=SG"
 
 > For support, raise an issue in this repo or reach out to the backend team.
 ```
+---
