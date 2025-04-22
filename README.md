@@ -419,10 +419,13 @@ GET http://localhost:3001/gapi/getOneTour?id=12345
 
 ---
 
+---
+
 ## 📌 Example Test With `curl`
 
 You can use `curl` to test the API directly from your terminal or Postman.
 
+```bash
 # ✅ Get all countries
 curl http://localhost:3001/gapi/getCountries
 
@@ -440,6 +443,7 @@ curl "http://localhost:3001/gapi/getOneTransfer?id=33131"
 
 # ✅ Get one tour by ID (replace with actual ID)
 curl "http://localhost:3001/gapi/getOneTour?id=12345"
+```
 
 ---
 
