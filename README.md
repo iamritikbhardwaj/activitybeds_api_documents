@@ -417,13 +417,29 @@ GET http://localhost:3001/gapi/getOneTour?id=12345
 
 ---
 
-## 📌 Example Test With curl
+---
 
-```bash
-curl http://localhost:3000/gapi/getCountries
+## 📌 Example Test With `curl`
 
-curl "http://localhost:3000/gapi/getCities?code=SG"
-```
+You can use `curl` to test the API directly from your terminal or Postman.
+
+# ✅ Get all countries
+curl http://localhost:3001/gapi/getCountries
+
+# ✅ Get cities for a specific country code (e.g., Singapore)
+curl "http://localhost:3001/gapi/getCities?code=SG"
+
+# ✅ Get products for a city (activities, transfers, tours)
+curl "http://localhost:3001/gapi/setProducts?city=Bali&countryId=2"
+
+# ✅ Get one activity by ID
+curl "http://localhost:3001/gapi/getOneActivity?id=33147"
+
+# ✅ Get one transfer by ID
+curl "http://localhost:3001/gapi/getOneTransfer?id=33131"
+
+# ✅ Get one tour by ID (replace with actual ID)
+curl "http://localhost:3001/gapi/getOneTour?id=12345"
 
 ---
 
