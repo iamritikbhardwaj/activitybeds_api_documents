@@ -422,7 +422,7 @@ You can use `curl` to test the API directly from your terminal or Postman.
 
 ```bash
 # ✅ Get all countries
-curl http://localhost:3001/gapi/getCountries
+curl "http://localhost:3001/gapi/getCountries"
 
 # ✅ Get cities for a specific country code (e.g., Singapore)
 curl "http://localhost:3001/gapi/getCities?code=SG"
