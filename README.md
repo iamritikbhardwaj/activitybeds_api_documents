@@ -401,7 +401,19 @@ These endpoints return a **single product** — either an activity, transfer, or
 
 ## 🔍 GET `/gapi/getProduct/details?id=45223`, `/getProduct/options?id=42432`
 
+### Description
 
+These endpoints return a **single product details** — either an activity, transfer, or tour — based on a unique ID passed as a query parameter.
+
+---
+
+### 🔍 Query Parameters
+
+| Parameter | Type   | Required | Description                |
+|-----------|--------|----------|----------------------------|
+| `id`      | number | ✅ Yes    | The unique ID of the item  |
+
+---
 
 ### 📥 Example Request
 
